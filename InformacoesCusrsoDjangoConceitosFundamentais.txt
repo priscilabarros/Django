@@ -1,0 +1,30 @@
+
+* Ambiente Windows:
+- Python - OK
+- PyCharm - OK
+- Virtual Env - OK
+Para criar uma virtual Env é necessário criar uma pasta para que no futuro se necessário possa existir vários 
+projetos com diferentes versões do Django.
+
+#Cria uma pasta e entra nessa pasta:
+mkdir projTeste
+cd projTeste
+
+#Cria um ambiente virtual, para que o Django não afete o SO
+python -m venv venv
+
+#Ativa a venv
+cd venv
+cd Scripts
+activate
+
+#Instalar o Django
+cd ..
+cd ..
+pip install django
+
+
+* Django - é um framework web baseado em python, cria diversas ferramentas para fazer ações comuns em um sistema como forms, 
+rotas e etc.
+
+Curso Django 2.0 - Aprendendo os conceitos fundamentais
