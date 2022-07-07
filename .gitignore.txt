@@ -1,0 +1,2 @@
+# ignore a venv 
+C:\Users\Jordan Queiroz\Documents\Pri\UdemyCursos\Django2ponto0AprendendoOsConceitosFundamentais\Django\projTeste
