@@ -1,3 +1,15 @@
+* Configurando o Django em um projeto no PyCharm 
+- Criar um novo projeto no PyCharm chamado de "meuProjeto"
+- Abrir o terminal e digitar pwd para saber se esta na pasta raiz do projeto
+- Criar uma virtual env para o projeto com o comando:
+python3 -m venv venv
+- Ativar venv com o comando:
+source venv/bin/activate  (Linux ou Mac)
+venv/Scripts/activate  (Windows)
+- Instalar o Django:
+pip install django
+
+- Criar o primeiro projeto Django: ( 4:09 )
 
 * Ambiente Windows:
 - Python - OK
