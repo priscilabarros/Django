@@ -1,3 +1,52 @@
+* Request X Response :
+
+- O Browser faz uma request para o servidor onde esta o django. O mesmo recebe essa request e retorna uma response.
+- Request é uma requisição, uma solicitação de alguma coisa
+- Response é uma resposta a essa requisição
+
+Workflow do Django:
+
+- Client( Browser )
+- Web server( Nginx / Apache )
+- WSGI( wsgi.py [unicorn/uwsgi])
+- Request( Middleware )
+- URL Resolution( urls.py)
+- View( Middleware )
+- View ( views.py )
+- Template ( Middleware ) 
+- Template ( example.html )
+- Response ( Middleware )
+- Model ( models.py )
+- Managers
+- Database ( PostgreSQL )
+
+* Composição das pastas iniciais no Django:
+- _init_.py - é um pacote python para o projeto.
+
+- settings.py - é onde o setup do projeto é feito, terá o BAE_DIR que é uma variavel que vai guardar
+ o caminho de onde fica o seu sistema operacional. A SECRET_KEY que é um arquivo de string que será usado para
+criptografar os dados do sistema com senhas e etc. Também tem a variavel DEBUG = True quando estamos em modo de 
+desenvolvimento para que sejam mostrados vários detalhes do que esta rodando, quando o software estiver em 
+produção mudamos o seu valor para false. ALLOWED_HOST onde é colocado a lista de domínios em que a aplicação 
+funcionará. INSTALLED_APPS lista de algumas aplicações que já vem instaladas. MIDDLEWARE parte de autenticação , menssageria.
+ROOT_URLCONF rotas das urls.  TEMPLATES toda as configurações relacionadas a template. WSGI assim como as urls
+também mapeamos os WSGIs. DATABASES configurações do banco de dados, já vem configurado o sqlite3. 
+AUTH_PASSWORDS_VALIDATIONS verifica senhas já de usuarios ou somente numericas...LANGUAGE_CODE ajusta informações
+de linguagem, horas etc,. STATIC_URL é o endereço dos arquivos staticos como css, html e etc
+
+- urfs.py - arquivo principal de url
+
+- wsgi.py - é o entrepoint da aplicação quando ela já esta publicada na web
+
+- manage.py - arquivo utilitario ajuda a criar o banco de dados criar migrações, super 
+usuarios, fazer collect stetic
+
+* Criar um novo projeto Django:
+- django-admin startproject controle_gastos .
+
+O ponto no final do comando indica a não necessidade de ser criada uma pasta anterior somente com o nome do projeto.
+
+
 * Configurando o Django em um projeto no PyCharm 
 - Criar um novo projeto no PyCharm chamado de "meuProjeto"
 - Abrir o terminal e digitar pwd para saber se esta na pasta raiz do projeto
@@ -36,7 +85,7 @@ cd ..
 pip install django
 
 
-* Django - é um framework web baseado em python, cria diversas ferramentas para fazer ações comuns em um sistema como forms, 
-rotas e etc.
+* Django - é um framework web baseado em python, cria diversas ferramentas para fazer ações comuns em um sistema 
+como forms, rotas e etc.
 
 Curso Django 2.0 - Aprendendo os conceitos fundamentais
