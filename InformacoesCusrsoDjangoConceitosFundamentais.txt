@@ -1,4 +1,7 @@
-Criando a primeira app e o banco de dados - 2:19
+Criando a primeira app e o banco de dados - 2:29
+
+* Registrar a app no settings:
+'nome_da_app',
 
 * Cria uma app no Django. Ex: criou a app contas  :
 python manage.py startapp contas
