@@ -42,8 +42,13 @@ activate
 cd ..
 pip install django
 
-
 * Django - é um framework web baseado em python, cria diversas ferramentas para fazer ações comuns em um sistema 
 como forms, rotas e etc.
 
 Curso Django 2.0 - Aprendendo os conceitos fundamentais
+
+Preparação do ambiente:
+Instalar o git - OK
+Fazer Clone do projeto - OK
+Instalar o python -
+Instalar o PyCharm - 
