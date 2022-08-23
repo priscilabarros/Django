@@ -47,8 +47,15 @@ como forms, rotas e etc.
 
 Curso Django 2.0 - Aprendendo os conceitos fundamentais
 
-Preparação do ambiente:
-Instalar o git - OK
-Fazer Clone do projeto - OK
-Instalar o python -
-Instalar o PyCharm - 
+* Preparação do ambiente:
+- Instalar o git - OK
+- Fazer Clone do projeto - OK
+- Criar um token para que o github funcione do novo notebook:
+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 - OK
+- Instalar o python - OK
+- Instalar o pip - Ok
+- Instalar o Django - OK
+- Instalar o PyCharm - OK
+Comando para iniciar o PyCharm: ./pycharm.sh
+
+video: preparacao ambiente Linux 07:42
