@@ -1,10 +1,29 @@
-Criando a primeira app e o banco de dados - 2:29
+Criando a primeira app e o banco de dados - iniciar
 
 * Registrar a app no settings:
 'nome_da_app',
 
 * Cria uma app no Django. Ex: criou a app contas  :
 python manage.py startapp contas
+
+* Estrutura de pastas iniciais no Django:
+- init - pacote python
+- settings - settup do projeto com alguns elementos importantes que serão listados - 
+BASE_DIR: variavel que guarda o caminho de onde esta seu projeto no SO
+SECRET_KEY: string para criptografar dados do usuario
+DEBUG = True: mantem a variavel debug true quando estamos em desenvolvimento para
+coletar logs, detalhes, quando o projeto é colocado em produção deve ficar false.
+ALLOWED_HOSTS = []: variavel que recebe a lista de dominios que sua aplicação funcione.
+INSTALLED_APPS: lista de aplicações instaladas e todas aplicações futuras criadas
+MIDDLEWARE: outras ações que o django já faz por nós ex: autenticação, segurança...
+ROOT_URLCONF: guarda as urls 
+TEMPLATES: guarda os templates
+WSGI_APPLICATION: mapeamento de wsgi
+DATABASES: configurações de banco de dados, já vem com o sqlite3
+ADMIN_PASSWORD_VALIDATIONS: já vem com algumas configurações de password
+LANGUAGE_CODE: alteração de idioma
+TIME_ZONE: alteração de time zone
+
 
 * Configurando o Django em um projeto no PyCharm 
 - Criar um novo projeto no PyCharm chamado de "meuProjeto"
@@ -16,6 +35,11 @@ source venv/bin/activate  (Linux ou Mac)
 venv/Scripts/activate  (Windows)
 - Instalar o Django:
 pip install django
+- Criar um projeto no Django:
+django-admin startproject controle_gastos 
+ou django-admin startproject controle_gastos .
+OBS: o ponto no final indica que a criação do projeto será no diretorio atual e 
+não em uma subpasta
 
 - Criar o primeiro projeto Django: ( 4:09 )
 
@@ -59,3 +83,4 @@ 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 - OK
 Comando para iniciar o PyCharm: ./pycharm.sh
 
 video: preparacao ambiente Linux 07:42
+
