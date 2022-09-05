@@ -1,4 +1,55 @@
-Criando a primeira app e o banco de dados - iniciar
+Entendendo as Views do Django - 4:15
+
+* O que é uma View?
+é uma página que irá refletir uma ação que o usuário deseja executar
+OBS: ao criar uma view deve ser posta a rota no doc urls.py e a ação que a view irá executar dentro do doc views.py dentro da app
+EX url.py:
+
+from django.contrib import admin
+from django.urls import path
+from django.contrib import admin
+from django.urls import path
+from contas.views import home
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('contas/',home)
+]
+
+EX views.py
+
+from django.shortcuts import render
+
+from django.http import HttpResponse
+import datetime
+
+def home(request):
+    now = datetime.datetime.now()
+    html = "<html><body>It is now %s.</body></html>" %now
+    return HttpResponse(html)
+
+
+* Como para a aplicação:
+Iniciar servidor: python manage.py runserver
+endereço da aplicação: http://127.0.0.1:8000/
+parar a aplicação: ctrl+C
+Criar um super user: python manage.py createsuperuser
+
+* Como adicionar o banco de dados :
+comando: python manage.py migrate
+
+* Como registrar uma app no settings:
+abra o arquivo settings.py no projeto principal;
+na parte de INSTALLED_APPS e adicione o nome da app;
+EX: 'contas',
+
+* Comando para criar uma app:
+python manage.py startapp contas
+OBS: ao criar uma app ela deve ser registrada no settings
+
+
+* iniciar o Pycharm:
+./pycharm.sh
 
 * Registrar a app no settings:
 'nome_da_app',
