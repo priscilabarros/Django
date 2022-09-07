@@ -1,4 +1,7 @@
-Entendendo as Views do Django - 4:15
+Retornando um template - 2:55
+
+* Template - 
+OBS: por padrão o Django espera que você já tenha uma pasta com o nome template na sua app e dentro da pasta template uma nova pasta com o nome da app
 
 * O que é uma View?
 é uma página que irá refletir uma ação que o usuário deseja executar
@@ -29,11 +32,12 @@ def home(request):
     return HttpResponse(html)
 
 
-* Como para a aplicação:
+* Comandos para a aplicação:
 Iniciar servidor: python manage.py runserver
 endereço da aplicação: http://127.0.0.1:8000/
 parar a aplicação: ctrl+C
 Criar um super user: python manage.py createsuperuser
+criar as estruturas principais de um html automaticamente: html:5 + tab
 
 * Como adicionar o banco de dados :
 comando: python manage.py migrate
