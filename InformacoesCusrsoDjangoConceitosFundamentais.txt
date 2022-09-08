@@ -1,4 +1,29 @@
-Retornando um template - 2:55
+Aprofundando no sistema de templates do django - iniciar
+
+* Model - é a definição dos campos que serão utilizados no Banco de Dados.
+Normalmente é um model para cada tabela no banco de dados.
+Cada coluna da minha tabela no banco é um field do modulo.
+OBS: os modulos ficam dentro da app.
+
+Todo modulo em Django tem que herdar de models.Model
+
+Exemplo de Model que ira representar no banco de dados uma categoria que tem um field chamado nome:
+
+class Categoria(models.Model):
+    nome = models.Charfield(max_length=100)
+
+Os modelos podem ser registrados no admin para validação exemplo:
+from django.contrib import admin
+from .models import Categoria
+from .models import Transacao
+
+admin.site.register(Categoria)
+admin.site.register(Transacao)
+
+Commo definir o nome de plural de uma classe:
+    class Meta:
+        verbose_name_plural = 'Transacoes'
+
 
 * Template - 
 OBS: por padrão o Django espera que você já tenha uma pasta com o nome template na sua app e dentro da pasta template uma nova pasta com o nome da app
@@ -38,6 +63,8 @@ endereço da aplicação: http://127.0.0.1:8000/
 parar a aplicação: ctrl+C
 Criar um super user: python manage.py createsuperuser
 criar as estruturas principais de um html automaticamente: html:5 + tab
+Criar uma alteração no BD: python manage.py makemigrations
+Após uma alteração no BD deveserrodado: python manage.py migrate
 
 * Como adicionar o banco de dados :
 comando: python manage.py migrate
