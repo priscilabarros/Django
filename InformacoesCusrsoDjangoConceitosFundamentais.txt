@@ -1,4 +1,23 @@
-Aprofundando no sistema de templates do django - iniciar
+Aprofundando no sistema de templates do django - 03:14
+
+* como mostrar informações no template:
+as informaçẽs podem ser mostradas atraves de uma variavel adicionada na view.
+EX a variavel now dentro de uma coleção chamada data:
+def home(request):
+    data = {}
+
+    data['now'] = datetime.datetime.now()
+    # html = "<html><body>It is now %s.</body></html>" % now
+
+    return render(request, 'contas/home.html', data)
+
+E é renderizada pelo template atraves do paragrafo:
+
+<body>
+    <h1>Seja bem vindo</h1>
+
+    <p>Agora sao: {{now}}</p>
+</body>
 
 * Model - é a definição dos campos que serão utilizados no Banco de Dados.
 Normalmente é um model para cada tabela no banco de dados.
